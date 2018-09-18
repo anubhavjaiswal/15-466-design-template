@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<!-- NOTE: the string 'TODO' appears everywhere you need to fill in information. -->
 <html>
 <head>
-<title>TODO:Title For Your Game</title>
+<title>Super Tanks</title>
 <!-- NOTE: this CSS sets up the ".figure" class to center images, and instructs images in ".figure"s to have space around them and to render crisp pixel edges when scaled [e.g. for retina displays]. -->
 <style>
 body {
@@ -50,26 +49,37 @@ p {
 </style>
 </head>
 <body>
-<h1>TODO: Title For Your Game</h1>
-<div id="author">by: TODO Your Name (TODO your andrewid)</div>
-<p>TODO: one-sentence summary of your game, highlighting the unique "hook" of the game.</p>
+<h1>Super Tanks</h1>
+<div id="author">by: Anubhav Jaiswal (ajaiswal)</div>
+<p>This game is like tanks but you can build fortnite-esque walls based on materials you explode within the ground. Different materials build different walls with different strengths. Directly hitting an oponent causes some damage, and the game ends when one of the players' tanks is fully damaged.</p>
 <!-- the <div> wrapping this image centers it on the page. -->
-<!-- TODO: drawing showing the main view of the game during play -->
 <div class="figure">
-<img src="game.png" />
+<img src="overview.png" />
 </div>
-<p>TODO: more information (2-3 sentences) about gameplay, referring to the image above.</p>
+<p>This game is like tanks where you shoot projectiles to destroy your oponent, however you can shoot projectiles into the ground to 'mine' materials to use to build walls. These walls can be used to block bullets that come towards you.</p>
 
 <h2>Gameplay</h2>
-<p>TODO: Describe how the game starts, plays (e.g. what are the controls), and ends.</p>
-<!-- TODO: illustrate your descriptions with more drawings -->
+<p>The game starts with two tanks on opposite sides of a field. There are initially some materials in the ground, but no craters anywhere. The timeout for each bullet starts at five seconds, meaning that each player can fire a bullet every five seconds, though this decreases by one second every minute till it reaches 1 second. </p>
 <div class="figure">
-<img src="before-reset.png" />
-<img src="after-reset.png" />
+<img src="start.png" />
 </div>
-
+<p>The player moves the tank using the left and right arrow keys. The barrel of the tank can be moved up and down using the up and down arrow keys. When the barrel is moved, the projected projectile will be drawn if the game is on easy mode, otherwise it will be left out.
+When the player hits an opposing tank with a bullet, the opponent's tank loses health. When the player hits the ground with a projectile, a divot is created in the ground. If the player manages to hit a metrial block (marked as the yellow and sivler squares in the image), they recieve 3 of each material the block specifies.
+Once a player has a material, they can build a wall using one of the selected materials. A wooden wall is able to stop a single bullet, whereas a steel wall can stop two bullets. A steel wall can be created from steel blocks that are seen as the silver boxes with an 'S' on them in the image. Wooden walls can be built from
+wooden blocks, which are the yellow blocks with a 'W' on them in the image. The player builds a wall by moving the mouse to a location on the ground where they want their wall to stand. The shift key is used to cycle between materials so a player can select which type of wall they want to build. Once a wooden wall is hit once,
+it disintegrates, however when a steel wall gets hit once, it gets red cracks in it as can be seen in the image. Upon the seocnd hit, a steel wall is destroyed.</p>
+<div class="figure">
+<img src="gameplay1.png" />
+</div>
+<p>The health for each tank is displayed right above the tank itself. Each player will see the amount of each material they have in the upper corner of the screen. They will also see the current timed delay for each shot written there. As mentioned above, this delay starts off at five seconds and decreases by a second a minute till
+it reaches one second. When a bullet hits the ground or the other tank, a short explosion is seen and a hole is created in the ground or the opponents health decreases. As can be seen in the above image, these holes in the ground are useful to get to materials necessary to build walls. This game is NOT turn based so anyone can shoot
+as soon as their shot timeout cycles and move whenever they want. The speed of the projectiles will be somewhat slow to make the game more interesting. Additionally any holes / divots that are created in the ground can be problematic for a tank since driving into one will greatly decrease the speed. It is also possible to fall into
+a hole and get completely stuck at which point the player would need to shoot into the ground to decrease the slope to get out. This will result in the player loosing some health since the blast ranges for a projectile wayne as distance increases.
+</p>
+<p> Note: Shots have blast radii, so objects next to where a projectile lies will be damaged more than objects further away. Thus a tank can be damaged even if a direct hit did not occur.
+</p>
 <h2>Assets</h2>
-<p>TODO: Provide a link to any preliminary 3D models, sounds, or <a href="https://github.com/ixchow/amoeba-escape/blob/master/tiles.png">textures</a> for the game. Make sure to only link to assets with appropriate licenses.</p>
+<p> This site has some nice models for tanks <a href="https://free3d.com/3d-models/blender-tank">tank blend files</a> The license is a personal use license so it should be fine for this class </p>
 
 </body>
 </html>
